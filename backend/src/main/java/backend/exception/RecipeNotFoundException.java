@@ -1,4 +1,10 @@
 package backend.exception;
 
-public class RecipeNotFoundException {
+public class RecipeNotFoundException extends RuntimeException{
+    public RecipeNotFoundException (Long id) {super("could not find id " + id);
+    }
+
+    public RecipeNotFoundException(String message){
+        super(message);
+    }
 }
